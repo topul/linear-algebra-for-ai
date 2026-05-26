@@ -50,11 +50,6 @@ cd /home/cody/ai-learn
 ```
 01_numpy_vectors/
 ├── lesson01.ipynb              ← 主战场，用 Jupyter 打开
-├── README.md                   ← 纯文字概念讲解（可选预读）
-├── lesson01_vectors.py         ← 同样内容的脚本版本（不用Jupyter的话）
-├── lesson01_exercises.py       ← 练习题（脚本版）
-├── lesson01_solutions.py       ← 答案
-└── lesson01_visualization.png  ← 生成的图
 ```
 
 ## 🛠 环境
@@ -70,4 +65,3 @@ cd /home/cody/ai-learn
 2. **从上到下逐个 cell 运行**，边运行边读
 3. 看到 TODO 的 cell 自己动手填，做不出来看下面"答案" cell
 4. 改改代码玩一玩，比如把数字换掉看结果
-5. 学完告诉我感觉，我继续写第02课

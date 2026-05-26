@@ -1,7 +1,16 @@
 """公用工具：字体配置 + 常用辅助函数"""
 import os
 import matplotlib
-matplotlib.use('Agg')
+# 仅在没有显示器（运行 .py 脚本 + 保存 png）时切到 Agg backend
+# Jupyter 会自己注入 inline backend，这里不要强制设置
+if not os.environ.get('DISPLAY') and not os.environ.get('MPLBACKEND'):
+    # 进一步判断：是否在 Jupyter 里（有 IPython 实例就别动 backend）
+    try:
+        from IPython import get_ipython
+        if get_ipython() is None:
+            matplotlib.use('Agg')
+    except ImportError:
+        matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
